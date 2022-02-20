@@ -29,6 +29,7 @@ h1:before
 .text-font
 {
   color: white;
+  text-shadow: 0 0 20px #3dff03;
   text-align: right;
   font-size: 3em;
 }
