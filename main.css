@@ -33,3 +33,32 @@ h1:before
   text-align: right;
   font-size: 3em;
 }
+.text-font2
+{
+  color:rgb(255, 255, 255);
+  text-shadow: 0 0 20px  blueviolet;
+  text-align: left;
+  text-decoration: underline;
+  font-size: 4em;
+
+}
+.text-font3
+{
+  color:rgb(255, 255, 255);
+  text-shadow: 0 0 5px  blueviolet;
+  text-align: left;
+  font-size: 2em;
+
+}
+.text-font-title
+{
+  color: white;
+  text-shadow: 0 0 20px #3dff03;
+  text-align: center;
+  font-size: 3em;
+}
+.center {
+  margin-left: 450px;
+  margin-right: auto;
+  width: 50%;
+}
