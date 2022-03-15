@@ -62,3 +62,32 @@ h1:before
   margin-right: auto;
   width: 50%;
 }
+.image
+{
+  height: 500px;
+  width: 900px;
+  float: right;
+  margin-right: 200px;
+  margin-top: 20px;
+}
+.down
+{
+  margin-top: 600px;
+}
+.button{
+  color:rgb(255, 255, 255);
+  text-shadow: 0 0 5px  blueviolet;
+  text-align: left;
+  font-size: 2em;
+  margin-left: 100px;
+  margin-top: 500px;
+  cursor: pointer;
+}
+.mainproject{
+  color:rgb(255, 255, 255);
+  text-shadow: 0 0 20px  blueviolet;
+  text-align: left;
+  text-decoration: underline;
+  font-size: 4em;
+  margin-left: 1000px;
+}
