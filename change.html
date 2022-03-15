@@ -1,0 +1,178 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+//written in C#
+
+public class Character
+{
+    bool hasShield;
+    private string name;
+    private string mainAbility;
+    private string secondAbility;
+    private int attack;
+    private int defense;
+    private int magic;
+    private int currentHealth;
+    private int maxHealth;
+    private int dodge;
+    private int level;
+    private int speed;
+    private int expAmount;
+    private int totalExp;
+
+    public Character(string name, string mainAbility, string secondAbility,
+                     int attack, int defense, int magic, int currentHealth,int maxHealth,
+                     int dodge, int level, int speed, int expAmount, int totalExp)
+    {
+        this.name = name;
+        this.mainAbility = mainAbility;
+        this.secondAbility = secondAbility;
+        this.attack = attack;
+        this.defense = defense;
+        this.magic = magic;
+        this.currentHealth = currentHealth;
+        this.maxHealth = maxHealth;
+        this.dodge = dodge;
+        this.level = level;
+        this.speed = speed;
+        this.expAmount  = expAmount;
+        this.totalExp += expAmount;
+    }
+
+    public string getName()
+    {
+        return name;
+    }
+    public string getMainAbility()
+    {
+        return mainAbility;
+    }
+    public string getSecondAbility()
+    {
+        return secondAbility;
+    }
+    public int getAttack()
+    {
+        return attack;
+    }
+    public int getDefense()
+    {
+        return defense;
+    }
+    public int getMagic()
+    {
+        return magic;
+    }
+    public int getCurrentHealth()
+    {
+        return currentHealth;
+    }
+    public int getMaxHealth()
+    {
+        return maxHealth;
+    }
+    public int getDodge()
+    {
+        return dodge;
+    }
+    public int getSpeed()
+    {
+        return speed;
+    }
+    public int getLevel()
+    {
+        return level;
+    }
+    public int getExpAmount()
+    {
+        return expAmount;
+    }
+    public int getTotalExp()
+    {
+        return totalExp;
+    }
+    public void setName(string name)
+    {
+        this.name = name;
+    }
+    public void setMainAbility(string mainAbility)
+    {
+        this.mainAbility = mainAbility;
+    }
+    public void setSecondAbility(string secondAbility)
+    {
+        this.secondAbility = secondAbility;
+    }
+    public void setAttack(int attack)
+    {
+        this.attack = attack;
+    }
+    public void setDefense(int defense)
+    {
+        this.defense = defense
+    }
+    public void setMagic(int magic){this.magic = magic;}
+    public void setCurrentHealth(int currentHealth) {this.currentHealth = currentHealth;}
+    public void setMaxHealth(int maxHealth) { this.maxHealth = maxHealth;}
+    public void setDodge(int dodge){this.dodge = dodge;}
+    public void setLevel(int level){this.level = level; }
+    public void setSpeed(int speed){this.speed = speed;}
+    public void setExpAmount(int expAmount){ this.expAmount = expAmount;}
+    public void setTotalExp(int totalExp){this.totalExp = totalExp;}
+
+
+
+
+
+    //string name, string mainAbility, string secondAbility,
+    //int attack, int defense, int magic, int health, int dodge,
+    //int level, int speed, int expAmount, int totalExp)
+
+
+
+    public void levelUp(Character chara)
+    {
+        int newLevel = chara.getLevel() + 1;
+        chara.setExpAmount(newLevel * 100 * 1.25);
+        chara.setLevel(newLevel);
+        chara.setAttack(chara.getAttack() + (chara.getAttack() / 3));
+        chara.setDefense(chara.getDefense() + (chara.getDefense() / 3));
+        chara.setSpeed(chara.getSpeed() + (chara.getSpeed() / 3));
+        chara.setMagic(chara.getMagic() + (chara.getAttack() / 2));
+        chara.setMaxHealth(chara.getMaxHealth() + (chara.getMaxHealth() / 4));
+
+        //need to do stats for level DONT FUCKING KNOW what to do for that one.
+    }
+    public void shield(Character chara+)
+    {
+        int tempHealth = currentHealth + tempHealth;
+        chara.setCurrentHealth(tempHealth);
+        if (tempHealth > maxHealth) { hasShield = true; }
+        else {hasShield = false; }
+    }
+
+}
+class Chrono : Character
+{
+    public Chrono
+    {
+  
+        this.name = "Chrono";
+        this.mainAbility = "Time Slow/Increase";
+        this.secondAbility = "Time Bomb";
+        this.attack = 10;
+        this.defense = 5;
+        this.magic = 0;
+        this.health = 30;
+        this.dodge = 5;
+        this.level = 1;
+
+    }
+    public void chronoleaderSkill(Character chara)
+    {
+       for(int x = 1; x< 101; x+=1) { if(x==chara.level) { chara.dodge +=x } } } } } class EDTH: Character { public EDTH { this.name="E.D.T.H." ; this.mainAbility="Radioactive Healing" ; this.secondAbility="Evolution...?" ; this.attack=10; this.defense=5; this.magic=0; this.health=30; this.dodge=5; this.level=1; } public void edthleaderSkill(Character chara) { for (int x=1; x
+< 101; x +=1) { if (x==chara.level) { chara.health +=x } } } public void mainAbility(Character chara) { if (hasShield==true) { chara.shield() } else { } } } class Dorian : Character { string dorianStance="" ; public Dorian { this.name="Dorian" ; this.mainAbility="Stance" ; this.secondAbility="Tempo Change" ; this.attack=10; this.defense=5; this.magic=0; this.health=30; this.dodge=5; this.level=1; } public void dorianleaderSkill(Character chara) { switch(dorianStance) { case"Rock" : for(int x=1;x
+< 101; x+=1) { if (x==chara.level) { chara.attack +=x; } } break; case"Country" : for (int x=1; x
+< 101; x +=1) { if (x==chara.level) { chara.defense +=x; } } break; case"Country" : for (int x=1; x
+< 101; x +=1) { if (x==chara.level) { chara.speed +=x; } } break; } } public void mainAbility(Character chara) { } }
